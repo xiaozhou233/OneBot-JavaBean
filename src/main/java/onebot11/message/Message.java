@@ -9,12 +9,12 @@ public class Message {
     public List<HashMap<String, HashMap<String, ?>> message;
     public List<?> segments;
 
-    public void setMessage(List<HashMap<String, HashMap<String, ?>> message) {
+    public void setMessage(List<HashMap<String, HashMap<String, ?>>> message) {
         this.message = message;
         message.forEach(this::addSegment);
     }
 
-    private void addSegment(HashMap<String, HashMap<String, ?>> segment) {
+    private void addSegment(HashMap<String, HashMap<String, ?>>> segment) {
         
     }
     
