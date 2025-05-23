@@ -3,6 +3,9 @@ package onebot11.message;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.HashMap;
+
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class Segment {
