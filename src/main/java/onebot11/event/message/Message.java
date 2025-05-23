@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import onebot11.event.Event;
+import onebot11.message.Message;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -20,7 +21,7 @@ public class Message extends Event {
     @JsonProperty("user_id")
     protected long userID;
 
-    protected Object message;
+    protected Message message;
 
     @JsonProperty("raw_message")
     protected String rawMessage;
