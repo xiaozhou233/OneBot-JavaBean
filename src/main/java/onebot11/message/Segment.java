@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.HashMap;
 
 @Data
-@EqualsAndHashCode(callSuper = true)
 public class Segment {
     @JsonProperty("type")
     public String type;
