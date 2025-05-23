@@ -10,5 +10,5 @@ public class Segment {
     public String type;
 
     @JsonProperty("data")
-    public T data;
+    public HashMap<String, ?> data;
 }

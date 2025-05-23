@@ -5,11 +5,17 @@ import java.util.List;
 
 public class Message {
     // TODO: Message Segments
-    public List<Segment> segments;
+    public List<HashMap<String, ?> message;
+    public List<class extends Segment> segments;
 
-    public void setMessage(Object[] message) {
-        
+    public void setMessage(List<HashMap<String, ?> message) {
+        this.message = message;
+        message.forEach(this::addSegment);
     }
 
+    private void addSegment(HashMap<String,?> segment) {
+        
+    }
+    
     
 }

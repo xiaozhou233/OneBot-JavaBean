@@ -21,7 +21,7 @@ public class Message extends Event {
     @JsonProperty("user_id")
     protected long userID;
 
-    protected Message message;
+    protected onebot11.message.Message message;
 
     @JsonProperty("raw_message")
     protected String rawMessage;
