@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class Message {
     // TODO: Message Segments
-    public List<HashMap<String, HashMap<String, ?>> message;
+    public List<HashMap<String, HashMap<String, ?>>> message;
     public List<?> segments;
 
     public void setMessage(List<HashMap<String, HashMap<String, ?>>> message) {
@@ -14,7 +14,7 @@ public class Message {
         message.forEach(this::addSegment);
     }
 
-    private void addSegment(HashMap<String, HashMap<String, ?>>> segment) {
+    private void addSegment(HashMap<String, HashMap<String, ?>> segment) {
         
     }
     
