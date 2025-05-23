@@ -16,7 +16,7 @@ public class API {
             return null;
         }
         // TODO: toJson
-        return null;
+
     }
 
     protected String toJson() {
