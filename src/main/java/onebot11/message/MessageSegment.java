@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 import java.util.HashMap;
 
-public class Message {
+public class MessageSegment {
     // TODO: Message Segments
     public List<HashMap<String, HashMap<String, ?>>> message;
     public List<?> segments;
