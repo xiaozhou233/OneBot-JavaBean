@@ -6,9 +6,20 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class API {
-    protected HashMap<String, Object> data = new HashMap<>();
-    protected String toJson() {
+    protected String toJson(boolean httpFormat) {
+        if (httpFormat) {
+            // TODO: httpFormat
+            return null;
+        } else {
+            // TODO: wsFormat
+            // {action, params(httpFormat), echo}
+            return null;
+        }
         // TODO: toJson
         return null;
+    }
+
+    protected String toJson() {
+        return toJson(true);
     }
 }
