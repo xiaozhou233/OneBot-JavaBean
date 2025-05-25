@@ -4,34 +4,33 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 
 import java.util.Map;
 
-@JsonTypeName("text")
-public class Text extends TypedSegment<String> {
+@JsonTypeName("face")
+public class Face extends TypedSegment<String> {
 
-    public Text() {
-        super("text");
+    public Face() {
+        super("face");
     }
 
-    public Text(String text) {
-        super("text");
+    public Face(String text) {
+        super("face");
         setContent(text);
     }
 
-    public String getText() {
+    public String getID() {
         return getContent();
     }
 
-    public void setText(String text) {
+    public void setID(String text) {
         setContent(text);
     }
-
     @Override
     protected String fromData(Map<String, Object> data) {
-        Object t = data.get("text");
+        Object t = data.get("id");
         return t instanceof String ? (String) t : null;
     }
 
     @Override
     protected Map<String, Object> toData(String content) {
-        return Map.of("text", content);
+        return Map.of("id", content);
     }
 }
