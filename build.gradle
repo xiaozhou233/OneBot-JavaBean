@@ -27,6 +27,7 @@ dependencies {
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.19.0'
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.19.0'
+
 }
 
 jar {
@@ -42,9 +43,12 @@ publishing {
         publications {
             mavenJava(MavenPublication) {
                 from components.java
+                groupId = 'com.github.xiaozhou233'
+                artifactId = 'onebot-javabean'
             }
         }
 
+        // Local Server
         maven {
             name = "Gitea"
             url = uri("http://192.168.2.222:13000/api/packages/xiaozhou233/maven")
@@ -57,6 +61,16 @@ publishing {
 
             authentication {
                 header(HttpHeaderAuthentication)
+            }
+        }
+
+        // Github
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/xiaozhou233/OneBot-JavaBean")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
             }
         }
     }
