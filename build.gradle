@@ -43,7 +43,7 @@ publishing {
         publications {
             mavenJava(MavenPublication) {
                 from components.java
-                groupId = 'com.github.xiaozhou233'
+                groupId = 'onebot11'
                 artifactId = 'onebot-javabean'
             }
         }
